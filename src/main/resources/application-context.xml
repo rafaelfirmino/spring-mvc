@@ -27,5 +27,6 @@
 	</bean>
 	
 	<import resource="spring-security.xml" />
+	<import resource="spring-data.xml" />
 
 </beans>
