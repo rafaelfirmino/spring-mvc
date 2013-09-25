@@ -25,5 +25,7 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+	
+	<import resource="spring-security.xml" />
 
 </beans>

@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
  *
  */
 @Controller
-@RequestMapping("/home")
 public class HomeController {
 
 	@RequestMapping(value="/getHome" ,method= RequestMethod.GET)
