@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:cxf="http://camel.apache.org/schema/cxf"
+	xmlns="http://www.springframework.org/schema/beans" xmlns:camel="http://camel.apache.org/schema/spring"
+	xsi:schemaLocation="
+        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd
+        http://camel.apache.org/schema/cxf http://camel.apache.org/schema/cxf/camel-cxf.xsd
+                http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://cxf.apache.org/jaxws
+                http://cxf.apache.org/schemas/jaxws.xsd">
+
+	<cxf:rsServer id="server" address="http://localhost:8090/"
+		serviceClass="br.com.uol.test.rest.TesteResource"></cxf:rsServer>
+		
+	<bean id="routeBuilder" class="br.com.uol.test.rest.TesteRouterBuilder" />
+	
+	<camelContext xmlns="http://camel.apache.org/schema/spring">
+		<routeBuilder ref="routeBuilder" />
+	</camelContext>
+
+</beans>

@@ -7,11 +7,13 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-@Repository
-@Transactional(readOnly=true)
+import br.com.uol.test.repository.HomeRepository;
+
+//@Repository
+//@Transactional(readOnly=true)
 public class HomeRepositoryImpl implements HomeRepository {
 
-	@PersistenceContext
+//	@PersistenceContext
 	private EntityManager em;
 	
 	public String getMerchantName(){
